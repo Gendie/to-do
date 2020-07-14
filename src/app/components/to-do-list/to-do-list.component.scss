@@ -1,0 +1,99 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0efe9;
+    min-height: 100vh;
+
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background-color: #ffffff;
+        padding: 35px;
+        min-width: 320px;
+        box-shadow: 5px 5px 6px -7px #777;
+
+        .card__head {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 28px;
+        }
+
+        .card__body {
+            margin-bottom: 28px;
+            .card__body-row {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                margin-right: -35px;
+                padding-right: 35px;
+                margin-left: -35px;
+                padding-left: 35px;
+                &:hover {
+                    background-color: #f7f7f7;
+                }
+                &.checked {
+                    p {
+                        color: #d4d6dd;
+                    }
+                }
+                p {
+                    padding: 7px 0;
+                    margin: 0;
+                }
+            }
+        }
+
+        .card__action {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            width: 70px;
+            height: 70px;
+            background-color: #6be8b2;
+            color: #46bd8a;
+            border-radius: 50%;
+            outline: none;
+            border: none;
+            box-shadow: 5px 5px 6px -7px #777;
+            &:hover {
+                box-shadow: 5px 5px 6px -6px #777;
+            }
+        }
+    }
+}
+
+.date {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .date__day {
+        font-size: 32px;
+        font-family: hind-500;
+        margin-right: 5px;
+        line-height: 1;
+    }
+    .date__month-year {
+        display: flex;
+        flex-direction: column;
+        .date__month {
+            font-family: hind-500;
+            margin: 0;
+            line-height: 1;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+        .date__year {
+            margin: 0;
+            font-family: hind-300;
+            line-height: 1;
+            font-size: 14px;
+        }
+    }
+}

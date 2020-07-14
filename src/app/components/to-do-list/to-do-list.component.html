@@ -1,0 +1,25 @@
+<div class="page">
+    <div class="card">
+        <div class="card__head">
+            <div class="date">
+                <div class="date__day">12</div>
+                <div class="date__month-year">
+                    <p class="date__month">Jan</p>
+                    <p class="date__year">2016</p>
+                </div>
+            </div>
+            <p class="m-0">Tuesday</p>
+        </div>
+        <div class="card__body">
+            <div *ngFor="let toDoItem of toDoList" (click)="toggleToDoItem(toDoItem)"
+                class="card__body-row cursor-pointer" [ngClass]="{'checked': toDoItem.isDone}">
+                <p [textContent]="toDoItem.title"></p>
+                <i *ngIf="toDoItem.isDone" class="far fa-check-circle color__checked font-icon__medium__bold"></i>
+                <i *ngIf="!toDoItem.isDone" class="far fa-circle color__dimmed font-icon__medium__normal"></i>
+            </div>
+        </div>
+        <button class="card__action cursor-pointer font-icon__medium__normal" (click)="openCreateModal()">
+            <i class="fas fa-plus"></i>
+        </button>
+    </div>
+</div>
