@@ -13,6 +13,7 @@
         background-color: #ffffff;
         padding: 35px;
         min-width: 320px;
+        max-width: 100%;
         box-shadow: 5px 5px 6px -7px #777;
 
         .card__head {
@@ -25,14 +26,16 @@
 
         .card__body {
             margin-bottom: 28px;
+            max-height: calc(100vh - 250px);
+            overflow-y: auto;
+            margin-right: -35px;
+            margin-left: -35px;
             .card__body-row {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 justify-content: space-between;
-                margin-right: -35px;
                 padding-right: 35px;
-                margin-left: -35px;
                 padding-left: 35px;
                 &:hover {
                     background-color: #f7f7f7;
@@ -95,5 +98,15 @@
             line-height: 1;
             font-size: 14px;
         }
+    }
+}
+
+
+@media only screen and (max-width: 426px) {
+    .page {
+        display: block;
+    }
+    .card {
+        width: 100%;
     }
 }

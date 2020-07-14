@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 import { ToDoCreateComponent } from '../to-do-create/to-do-create.component';
@@ -12,6 +12,7 @@ import { ToDoItem } from '../../models';
 })
 export class ToDoListComponent implements OnInit {
 
+  @ViewChild('cardBody') private cardBody: ElementRef<HTMLDivElement>;
   public toDoList: ToDoItem[] = [];
 
   constructor(
@@ -45,6 +46,9 @@ export class ToDoListComponent implements OnInit {
         title: newToDo,
         isDone: false
       })
+      setTimeout(()=>{
+        this.cardBody.nativeElement.scrollTo(0, this.cardBody.nativeElement.scrollHeight);
+      }, 0)
     }
     ).catch(() => {
       // Dismissed

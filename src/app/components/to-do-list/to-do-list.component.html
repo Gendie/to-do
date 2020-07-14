@@ -4,18 +4,18 @@
             <div class="date">
                 <div class="date__day">12</div>
                 <div class="date__month-year">
-                    <p class="date__month">Jan</p>
+                    <p class="date__month">{{"months.jan" | translate}}</p>
                     <p class="date__year">2016</p>
                 </div>
             </div>
-            <p class="m-0">Tuesday</p>
+            <p class="m-0">{{"days.tuesday" | translate}}</p>
         </div>
-        <div class="card__body">
+        <div #cardBody class="card__body">
             <div *ngFor="let toDoItem of toDoList" (click)="toggleToDoItem(toDoItem)"
                 class="card__body-row cursor-pointer" [ngClass]="{'checked': toDoItem.isDone}">
                 <p [textContent]="toDoItem.title"></p>
-                <i *ngIf="toDoItem.isDone" class="far fa-check-circle color__checked font-icon__medium__bold"></i>
-                <i *ngIf="!toDoItem.isDone" class="far fa-circle color__dimmed font-icon__medium__normal"></i>
+                <i *ngIf="toDoItem.isDone" class="far fa-check-circle color__checked font-icon__medium__bold ml-3"></i>
+                <i *ngIf="!toDoItem.isDone" class="far fa-circle color__dimmed font-icon__medium__normal ml-3"></i>
             </div>
         </div>
         <button class="card__action cursor-pointer font-icon__medium__normal" (click)="openCreateModal()">
