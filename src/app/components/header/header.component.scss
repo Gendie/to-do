@@ -1,0 +1,25 @@
+@import 'src/assets/scss/variables';
+
+header {
+    ul.language-select {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        li {
+            padding: 5px 5px;
+            min-width: 50px;
+            text-align: center;
+            cursor: pointer;
+            &:hover {
+                background-color: $color-secondry;
+            }
+            &.current {
+                background-color: $color-secondry;
+            }
+        }
+    }
+}

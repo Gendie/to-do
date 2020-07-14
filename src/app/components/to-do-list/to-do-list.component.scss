@@ -1,10 +1,12 @@
+@import 'src/assets/scss/variables';
+
 .page {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #f0efe9;
-    min-height: 100vh;
+    min-height: calc(100vh - 34px);
 
     .card {
         position: relative;
@@ -38,11 +40,11 @@
                 padding-right: 35px;
                 padding-left: 35px;
                 &:hover {
-                    background-color: #f7f7f7;
+                    background-color: $color-secondry;
                 }
                 &.checked {
                     p {
-                        color: #d4d6dd;
+                        color: $color-dimmed;
                     }
                 }
                 p {
@@ -59,7 +61,7 @@
             transform: translate(-50%, 50%);
             width: 70px;
             height: 70px;
-            background-color: #6be8b2;
+            background-color: $color-accent;
             color: #46bd8a;
             border-radius: 50%;
             outline: none;

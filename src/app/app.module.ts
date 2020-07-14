@@ -9,10 +9,12 @@ import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 
 import {
+  HeaderComponent,
   ToDoListComponent,
   ToDoCreateComponent
 } from './components';
 const components = [
+  HeaderComponent,
   ToDoListComponent,
   ToDoCreateComponent
 ]

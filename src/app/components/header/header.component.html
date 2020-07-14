@@ -1,0 +1,6 @@
+<header>
+    <ul class="language-select">
+        <li *ngFor="let lang of languages" [ngClass]="{'current': lang.current}"
+        (click)="setLanguage(lang.local)">{{lang.name}}</li>
+    </ul>
+</header>
